@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valentine Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Space+Grotesk:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="bg-texture" aria-hidden="true"></div>
+    <main class="page">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">February 15, 2026</p>
+                <h1>Kelsey</h1>
+                <p class="sub">A constellation of moments, stitched into albums and set to a gentle soundtrack.</p>
+                <div class="cta">
+                    <button id="toggle-audio" class="btn">Play background music</button>
+                    <span id="audio-status" class="status">Muted by default</span>
+                </div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+                <img class="orbit-top" id="msc-player" src="images/design/msc-player.png" alt="" />
+                <div class="orbit"></div>
+            </div>
+        </header>
+
+        <section class="albums">
+            <div class="section-head">
+                <h2>Albums</h2>
+                <p>moments to look back, each album holds a mood, a map, a memory.</p>
+            </div>
+            <div class="album-grid">
+                <article class="album-card" data-album="moonlit">
+                    <div class="album-cover cover-aurora">
+                    </div>
+                    <div class="album-body">
+                        <h3>Tagaytay</h3>
+                        <p>february 7, 2026</p>
+                        <button class="ghost" type="button">Open album</button>
+                    </div>
+                </article>
+                <article class="album-card" data-album="petal">
+                    <div class="album-cover cover-rose">
+                        <span class="tag">coming soon...</span>
+                    </div>
+                    <div class="album-body">
+                        <h3>Manila</h3>
+                        <p>Coming soon!</p>
+                        <button class="ghost" type="button">Open album</button>
+                    </div>
+                </article>
+                <article class="album-card" data-album="coastal">
+                    <div class="album-cover cover-coral">
+                        <span class="tag">coming soon...</span>
+                    </div>
+                    <div class="album-body">
+                        <h3>Coming soon!</h3>
+                        <p>Coming soon...</p>
+                        <button class="ghost" type="button">Open album</button>
+                    </div>
+                </article>
+                <article class="album-card" data-album="planets">
+                    <div class="album-cover cover-lilac">
+                        <span class="tag">coming soon...</span>
+                    </div>
+                    <div class="album-body">
+                        <h3>Coming soon!</h3>
+                        <p>Coming soon...</p>
+                        <button class="ghost" type="button">Open album</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="mix">
+            <div class="mix-panel">
+                <h2>Love Mix</h2>
+                <p>Tap a track to rearrange the light pulse. The mix changes the mood of the room.</p>
+                <div class="track-list" role="list">
+                    <button class="track" data-theme="aurora">Northern Serenade</button>
+                    <button class="track" data-theme="rose">Faded Velvet</button>
+                    <button class="track" data-theme="coral">Golden Tide</button>
+                    <button class="track" data-theme="lilac">Violet Hour</button>
+                </div>
+            </div>
+            <div class="mix-visual">
+                <div class="pulse"></div>
+                <div class="pulse"></div>
+                <div class="pulse"></div>
+            </div>
+        </section>
+
+        <section class="notes">
+            <div class="note-card">
+                <h2>Hi Kelssss</h2>
+                <p>
+                    Hi kelsss, happy 21st birthday! and happy valentine's day pu, I hope you like this little project i
+                    made for you pagandahin ko pa kapag may free time, more memories to come♡.
+                <div class="signature">-Henjee</div>
+            </div>
+        </section>
+    </main>
+
+    <div id="album-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-card" role="document">
+            <button class="modal-close" type="button" aria-label="Close album">Close</button>
+            <div id="modal-cover" class="album-cover cover-aurora">
+                <span id="modal-tag" class="tag">Album</span>
+            </div>
+            <div class="modal-body">
+                <h3 id="modal-title">Album Title</h3>
+                <p id="modal-desc">Album description.</p>
+                <div id="modal-gallery" class="modal-gallery" role="list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="image-lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+        <button class="lightbox-close" type="button" aria-label="Close image">Close</button>
+        <img id="lightbox-image" src="" alt="" />
+    </div>
+
+    <audio id="bg-audio" loop>
+        <source src="audio/JVKE%20-%20her%20(official%20lyric%20video).mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="gas-audio" loop>
+        <source src="audio/The%20Weeknd%20-%20Gasoline%20(Official%20Music%20Video).mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
